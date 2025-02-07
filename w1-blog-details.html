@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/blog-style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="/images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <article class="blog-detail">
+            <img src="images/week1/IMG_0501.JPG" alt="Blog Cover">
+            <h1>Week 1 Of On-The-Job Training For StraStan Solutions Corp.</h1>
+            <p class="date">February 4 - 6, 2025</p>
+            <section class="content">
+                <p>The first day covered AWS-CDK fundamentals, including setting up projects, understanding key concepts, and hands-on introductory labs. Participants worked through basic infrastructure as code examples, debugging challenges, and explored best practices for managing cloud resources. The afternoon focused on advanced labs, troubleshooting common issues, and an interactive Q&A session to reinforce learning.
+                    The second day transitioned into hands-on AWS service implementation. Participants showcased their To-Do App projects and dived into AWS services such as Cognito for authentication, Lambda for serverless computing, DynamoDB for NoSQL databases, and SQS for message queuing. The day concluded with a practical lab, where attendees applied their learning to build and deploy applications using AWS-CDK.
+                </p>
+                    <div class="documentation">
+                    <img src="/images/week1/bootcamp1.png" alt="">
+                    <img src="/images/week1/bootcamp2.png" alt="">
+                    </div>
+                    <p>
+                        As part of our onboarding and training at StraStan Solutions Corps, our team has been assigned to work on API gateway endpoints and their integration with AWS Lambda functions, DynamoDB tables, and other AWS services. Our primary focus this week is on two major modules: <strong>Marketplace</strong> and <strong>Cards</strong>. 
+                    </p>
+                
+                    <!-- Image Section -->
+                    <p>
+                        <img src="/images/week1/image.png" alt="API Gateway and Lambda Integration Overview" style="width: 100%; display: block; margin: 0 auto; object-fit: content;">
+                    </p>
+                
+                    <p>
+                        <strong>Understanding the Task</strong><br>
+                        The goal is to manage categories and sections in the <strong>Marketplace</strong> module while handling schema imports and verification processes in the <strong>Cards</strong> module. These operations involve interacting with API Gateway, triggering Lambda functions, storing data in DynamoDB, and ensuring event-driven processing through SQS queues and EventBridge rules.
+                    </p>
+                
+                    <p>
+                        <strong>Breakdown of the Work Assigned</strong><br><br>
+                
+                        <div class="module-container">
+                            <div>
+                                <strong>1. Marketplace Module:</strong>
+                                <ul>
+                                    <li>Updating and deleting categories using <code>PUT</code> and <code>DELETE</code> API endpoints.</li>
+                                    <li>Assigning subcategories to sections via a <code>POST</code> request.</li>
+                                    <li>Ensuring proper logging and monitoring for category modifications.</li>
+                                    <li>Handling event-driven updates using <strong>CategoryUpdateEvent</strong> and <strong>CategoryDeleteEvent</strong>.</li>
+                                </ul>
+                            </div>
+                            <img src="/images/week1/IMG_0487.jpg" alt="Marketplace Module Image" class="marketplace-image">
+                        </div>
+                    
+                        <div class="module-container">
+                            <div>
+                                <strong>2. Cards Module:</strong>
+                                <ul>
+                                    <li>Importing card schemas from CSV files via <code>POST /admin/cardschemas/csv</code>.</li>
+                                    <li>Implementing content verification through <code>POST /admin/listings/verify</code>.</li>
+                                    <li>Utilizing <strong>SchemaImportQueue</strong> and <strong>VerifyQueue</strong> for asynchronous processing.</li>
+                                    <li>Ensuring the smooth execution of <strong>SchemaImportEvent</strong> and <strong>VerifyEvent</strong> triggers.</li>
+                                </ul>
+                            </div>
+                            <img src="/images/week1/IMG_0540.jpg" alt="Cards Module Image" class="cards-image">
+                        </div>
+                    <p>
+                        <strong>Key Technologies & Tools Used</strong>
+                    </p>
+                    <ul>
+                        <li><strong>AWS Lambda</strong> for backend logic execution.</li>
+                        <li><strong>DynamoDB</strong> for NoSQL database storage.</li>
+                        <li><strong>API Gateway</strong> for managing endpoints.</li>
+                        <li><strong>SQS</strong> for message queuing and event-driven architecture.</li>
+                        <li><strong>Cognito</strong> for authentication and authorization.</li>
+                        <li><strong>EventBridge</strong> for event processing.</li>
+                    </ul>
+                    
+                    <p>
+                        <strong>Our Approach for the Week</strong>
+                    </p>
+                    <ul>
+                        <li><strong>Day 1-2:</strong> Familiarize ourselves with AWS services used in this project.</li>
+                        <li><strong>Day 3:</strong> Study existing API documentation and understand request-response flows.</li>
+                        <li><strong>Day 4:</strong> Implement and test API integrations in a sandbox environment.</li>
+                        <li><strong>Day 5:</strong> Debugging, monitoring logs, and reviewing performance optimizations.</li>
+                    </ul>                    
+                
+                        By the end of the week, we aim to gain a deeper understanding of API-driven architecture, event processing, and AWS cloud services. This assignment will provide hands-on experience crucial for our future tasks at StraStan Solutions Corps.
+                    </p>                 
+            </section>
+        </article>
+    </main>
+</body>
+</html>
