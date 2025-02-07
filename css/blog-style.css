@@ -84,24 +84,99 @@ nav {
 }
 
 .module-container {
-    display: flex;
+    display: block;
     align-items: center;
-    gap: 20px;
     margin-bottom: 20px;
+    position: relative;
 }
-.module-container img {
-    width: 700px; /* Adjust as needed */
-    height: 250px;
+
+/* Marketplace Module: Image on the right */
+.marketplace-image {
+    width: 100% !important; /* Adjust as needed */
+    height: 500px !important;
     border-radius: 8px;
-    position: absolute;
-    right: 4%;
     object-fit: content;
 }
 
-.marketplace-image {
-    margin-top: 100px;
+/* Cards Module: Image on the left */
+.cards-image {
+    width: 100% !important; /* Adjust as needed */
+    height: 500px !important;
+    border-radius: 8px;
+    object-fit: content;
 }
 
-.cards-image {
-    margin-top: 350px;
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 40%; /* Ensure it covers all images */
+    gap: 20px;
+    animation: slideAnimation 20s infinite linear;
+}
+
+.slide {
+    width: 50%; /* Display two images at a time */
+    flex-shrink: 0;
+}
+
+/* Optional: Auto-slide effect */
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    5% { transform: translateX(-25%); }
+    10% { transform: translateX(-50%); }
+    15% { transform: translateX(-75%); }
+    20% { transform: translateX(-100%); }
+    25% { transform: translateX(-125%); }
+    30% { transform: translateX(-150%); }
+    35% { transform: translateX(-175%); }
+    40% { transform: translateX(-200%); }
+    45% { transform: translateX(-225%); }
+    50% { transform: translateX(-250%); }
+    55% { transform: translateX(-275%); }
+    60% { transform: translateX(-300%); }
+    65% { transform: translateX(-325%); }
+    70% { transform: translateX(-350%); }
+    75% { transform: translateX(-375%); }
+    80% { transform: translateX(-400%); }
+    85% { transform: translateX(-425%); }
+    90% { transform: translateX(-450%); }
+    95% { transform: translateX(-475%); }
+    100% { transform: translateX(0%); }
+}
+
+.slideshow-container h1{
+    text-align: left;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 95% !important;
+    }
+
+    .documentation{
+        display: block !important;
+    }
+
+    .documentation img {
+        width: 100% !important;
+        object-fit: cover;
+    }
+    .task{
+        object-fit: cover;
+    }
 }
