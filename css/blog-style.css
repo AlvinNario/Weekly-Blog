@@ -181,7 +181,20 @@ nav {
         width: 100% !important;
         object-fit: cover;
     }
+    
+    .slideshow-container h1{
+        font-size: 20px;
+    }
+
+    .slides img{
+        width: 100% !important;
+        height: 250px !important;
+    }
+
     .task{
         object-fit: cover;
+    }
+    .footer {
+        width:100% !important;
     }
 }
