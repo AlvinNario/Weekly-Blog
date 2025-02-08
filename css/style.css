@@ -82,3 +82,21 @@ p {
     margin-bottom: 10px;
     margin-top: -10px;
 }
+
+@media screen and (max-width: 768px) {
+    .blog-list {
+        flex-direction: column;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    input{
+        width: 93%;
+    }
+
+    .blog-image {
+        height: auto !important;
+    }
+}

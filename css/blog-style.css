@@ -116,13 +116,13 @@ nav {
 
 .slides {
     display: flex;
-    width: 40%; /* Ensure it covers all images */
+    width: 30%; /* Ensure it covers all images */
     gap: 20px;
     animation: slideAnimation 20s infinite linear;
 }
 
 .slide {
-    width: 50%; /* Display two images at a time */
+    width: 40%; /* Display two images at a time */
     flex-shrink: 0;
 }
 
@@ -166,7 +166,7 @@ nav {
 @media screen and (max-width: 768px) {
 
     body{
-        width: 94% !important;
+        width: 92% !important;
     }
 
     header {
@@ -177,9 +177,26 @@ nav {
         display: block !important;
     }
 
+    .blog-detail img {
+        height: auto;
+    }
+
+    .blog-detail h1 {
+        font-size: 20px;
+    }
+
+    .date{
+        font-size: 13px !important;
+    }
+
     .documentation img {
         width: 100% !important;
         object-fit: cover;
+        height: auto;
+    }
+
+    .marketplace-image, .cards-image, .task{
+        height: auto !important;
     }
     
     .slideshow-container h1{
