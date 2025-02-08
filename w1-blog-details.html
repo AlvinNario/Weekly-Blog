@@ -89,17 +89,5 @@
     <footer class="footer">
         <p>&copy; 2025 Alvin S. Nario. All rights reserved.</p>
     </footer>
-
-    <script>
-        let keyframes = "@keyframes slideAnimation {";
-        for (let i = 0; i <= 100; i++) {
-            keyframes += `${i}% { transform: translateX(-${i}%); } `;
-        }
-        keyframes += "}";
-
-        const styleSheet = document.createElement("style");
-        styleSheet.innerText = keyframes;
-        document.head.appendChild(styleSheet);
-    </script>
 </body>
 </html>

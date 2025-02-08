@@ -129,25 +129,26 @@ nav {
 /* Optional: Auto-slide effect */
 @keyframes slideAnimation {
     0% { transform: translateX(0%); }
-    5% { transform: translateX(-25%); }
-    10% { transform: translateX(-50%); }
-    15% { transform: translateX(-75%); }
-    20% { transform: translateX(-100%); }
-    25% { transform: translateX(-125%); }
-    30% { transform: translateX(-150%); }
-    35% { transform: translateX(-175%); }
-    40% { transform: translateX(-200%); }
-    45% { transform: translateX(-225%); }
-    50% { transform: translateX(-250%); }
-    55% { transform: translateX(-275%); }
-    60% { transform: translateX(-300%); }
-    65% { transform: translateX(-325%); }
-    70% { transform: translateX(-350%); }
-    75% { transform: translateX(-375%); }
-    80% { transform: translateX(-400%); }
-    85% { transform: translateX(-425%); }
-    90% { transform: translateX(-450%); }
-    95% { transform: translateX(-475%); }
+    2% { transform: translateX(-25%); }
+    4% { transform: translateX(-50%); }
+    6% { transform: translateX(-75%); }
+    8% { transform: translateX(-100%); }
+    10% { transform: translateX(-125%); }
+    12% { transform: translateX(-150%); }
+    14% { transform: translateX(-175%); }
+    16% { transform: translateX(-200%); }
+    18% { transform: translateX(-225%); }
+    20% { transform: translateX(-250%); }
+    22% { transform: translateX(-275%); }
+    24% { transform: translateX(-300%); }
+    26% { transform: translateX(-325%); }
+    28% { transform: translateX(-350%); }
+    30% { transform: translateX(-375%); }
+    32% { transform: translateX(-400%); }
+    34% { transform: translateX(-425%); }
+    36% { transform: translateX(-450%); }
+    38% { transform: translateX(-475%); }
+    40% { transform: translateX(-500%); }
     100% { transform: translateX(0%); }
 }
 
@@ -166,7 +167,7 @@ nav {
 @media screen and (max-width: 768px) {
 
     body{
-        width: 92% !important;
+        width: 94% !important;
     }
 
     header {
@@ -192,10 +193,11 @@ nav {
     .documentation img {
         width: 100% !important;
         object-fit: cover;
-        height: auto;
+        height: 200px;
     }
 
     .marketplace-image, .cards-image, .task{
+        width: 100% !important;
         height: auto !important;
     }
     
@@ -207,6 +209,37 @@ nav {
         width: 100% !important;
         height: 250px !important;
     }
+
+    /* Optional: Auto-slide effect */
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    2% { transform: translateX(-25%); }
+    4% { transform: translateX(-50%); }
+    6% { transform: translateX(-75%); }
+    8% { transform: translateX(-100%); }
+    10% { transform: translateX(-125%); }
+    12% { transform: translateX(-150%); }
+    14% { transform: translateX(-175%); }
+    16% { transform: translateX(-200%); }
+    18% { transform: translateX(-225%); }
+    20% { transform: translateX(-250%); }
+    22% { transform: translateX(-275%); }
+    24% { transform: translateX(-300%); }
+    26% { transform: translateX(-325%); }
+    28% { transform: translateX(-350%); }
+    30% { transform: translateX(-375%); }
+    32% { transform: translateX(-400%); }
+    34% { transform: translateX(-425%); }
+    36% { transform: translateX(-450%); }
+    38% { transform: translateX(-475%); }
+    40% { transform: translateX(-500%); }
+    42% { transform: translateX(-525%); }
+    44% { transform: translateX(-550%); }
+    46% { transform: translateX(-575%); }
+    48% { transform: translateX(-600%); }
+    50% { transform: translateX(-625%); }
+    100% { transform: translateX(0%); }
+}
 
     .task{
         object-fit: cover;
