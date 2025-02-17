@@ -24,6 +24,14 @@
     <main>
         <section class="blog-list">
             <article>
+                <a href="w2-blog.html" style="text-decoration: none;">
+                <img src="/images/week2/IMG_0606.JPG" alt="Blog Image" class="blog-image">
+                <h2>Week 2 Of On-The-Job Training For StraStan Solutions Corp.</h2>
+                <p class="date">February 10 - 14, 2025</p>
+                <p>This week’s task revolves around managing and optimizing API integrations within an AWS-based...</p>
+                </a>
+            </article>
+            <article>
                 <a href="w1-blog-details.html" style="text-decoration: none;">
                 <img src="./images/week1/IMG_0501.JPG" alt="Blog Image" class="blog-image">
                 <h2>Week 1 Of On-The-Job Training For StraStan Solutions Corp.</h2>
@@ -31,15 +39,28 @@
                 <p>The first day covered AWS-CDK fundamentals, including setting up projects, understanding key...</p>
                 </a>
             </article>
-            <!-- <article>
-                <a href="w1-blog-details.html" style="text-decoration: none;">
-                <img src="/images/week1/IMG_0501.JPG" alt="Blog Image" class="blog-image">
-                <h2>Week 1 Of On-The-Job Training For StraStan Solutions Corp.</h2>
-                <p>Learn how to design user-friendly websites that convert...</p>
-                </a>
-            </article> -->
         </section>
     </main>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector("header input");
+    const articles = document.querySelectorAll(".blog-list article");
+
+    searchInput.addEventListener("input", function () {
+        const searchText = searchInput.value.toLowerCase();
+        
+        articles.forEach(article => {
+            const title = article.querySelector("h2").textContent.toLowerCase();
+            
+            if (title.includes(searchText)) {
+                article.style.display = "block";
+            } else {
+                article.style.display = "none";
+            }
+        });
+    });
+});
+
+    </script>
 </body>
 </html>

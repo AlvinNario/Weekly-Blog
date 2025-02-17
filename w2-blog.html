@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Week 2 - Blog | On-The-Job Training at StraStan Solutions Corp." />
+    <meta property="og:description" content="A detailed breakdown of our second week at StraStan Solutions Corp, focusing on AWS-CDK, API Gateway, and more." />
+    <meta property="og:image" content="https://alvinnario.github.io/Weekly-Blog/images/week2/IMG_0605.JPG" />
+    <meta property="og:url" content="https://alvinnario.github.io/Weekly-Blog/w2-blog.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="StraStan Solutions Blog" />
+    <title>Week 2 - Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/blog-style.css">
+    <link rel="icon" type="image/png" href="./images/week2/IMG_0605.JPG">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1ADwrkwxTV/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/alv.nnnnnn?igsh=MXJ1aWlzMTN2ejhzNw%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/AlvinNario"><i class="bi bi-github"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+        <div class="blog-detail">
+            <img src="./images/week2/IMG_0606.JPG" alt="Blog Cover" style="object-fit: cover;">
+            <h1>Week 2 Of On-The-Job Training For StraStan Solutions Corp.</h1>
+            <p class="date">February 10 - 14, 2025</p>
+            <section class="content">
+                <p>This week’s task revolves around managing and optimizing API integrations within an AWS-based system, focusing on Messages, Membership, and Auction functionalities. The work involves handling various API Gateway endpoints, ensuring that Lambda functions are correctly mapped, and verifying that data is properly stored and retrieved from DynamoDB.    
+                    Throughout the week, the tasks involve testing API flows, debugging issues with Lambda executions, ensuring correct data persistence in DynamoDB, and monitoring event-driven workflows via EventBridge. Additionally, authentication must be properly managed using Cognito user pools (AdminPool, UserPool), ensuring the right access control. Progress tracking through the status selection feature will help maintain clarity on completed and pending tasks.
+                    
+                    By the end of the week, all integrations should be working smoothly, with a structured process for handling messages, membership upgrades, and auction bidding. The overall goal is to streamline backend operations, ensure data consistency, and improve system reliability for these core features.</p>
+                    <div class="documentation">
+                    <img src="./images/week2/IMG_0638.JPG" alt="">
+                    <img src="./images/week2/IMG_0639.JPG" alt="">
+                    </div>
+                    <p>
+                        As part of our onboarding and training at StraStan Solutions Corps, our team has been assigned to work on API gateway endpoints and their integration with AWS Lambda functions, DynamoDB tables, and other AWS services. Our primary focus this week is on two major modules: <strong>Messages</strong>, <strong>Membership</strong>, and <strong>Auction</strong>. 
+                    </p>
+                
+                    <!-- Image Section -->
+                        <img src="./images/week2/task.png" alt="API Gateway and Lambda Integration Overview" class="task" style="width: 100%; display: block; margin: 0 auto; object-fit: content; height: 250px;">
+                
+                        <p>
+                            <strong>Understanding the Task</strong><br>
+                            This week, my task focuses on managing API integrations across multiple modules, including Messages, Membership, and Auction. In the Messages module, I need to handle pending message reviews, process user replies, and apply content filters by interacting with API Gateway, triggering Lambda functions, and ensuring proper message queuing through SQS and EventBridge. For the Membership module, my responsibility is to manage membership upgrades, update user records in DynamoDB, and automate event-driven actions. In the Auction module, I will oversee the bidding system, ensuring that bids are processed correctly, stored in DynamoDB, and integrated with event-based triggers. Throughout the week, I will also debug issues, monitor system performance, and ensure seamless authentication using Cognito user pools.
+                        </p>                        
+                
+                    <p>
+                        <div class="module-container">
+                            <p>For the Messages module, the tasks include implementing and refining features like reviewing pending messages, processing user replies, and applying content filters. This involves working with endpoints such as <code>GET</code> <code>/admin/messages/pending</code> and <code>POST</code> <code>/messages/{id}/reply</code>, ensuring that Lambda functions like getPendingMessages and replyToMessage function correctly. Additionally, messages must be queued properly in SQS (ReviewQueue, ReplyQueue, FilterQueue) while triggering necessary EventBridge rules (ReplyEvent, FilterEvent).</p>
+                        </div>
+
+                        <div class="module-container">
+                            <p>In the Membership module, the focus is on handling membership upgrades through the <code>POST /membership/upgrade</code> endpoint. The corresponding Lambda function, upgradeMembership, interacts with DynamoDB, updating the user’s membership status (USER#{id} MEMBERSHIP). This process also involves integrating SQS queues (MembershipQueue) and automating event-driven actions through EventBridge (MembershipEvent).</p>
+                        </div>
+                    
+                        <div class="module-container">
+                            <p>
+                                The Auction module requires setting up and validating the bidding system, ensuring that the <code>POST /auctions/{id}/bid</code> endpoint properly logs bids in DynamoDB (BID#{id} AUCTION#{auctionId}). The placeBid Lambda function needs to process requests efficiently, pushing them to the BidQueue and triggering BidEvent for further processing.
+                            </p>
+                        </div>
+                    <p>
+                        Throughout the week, the tasks involve testing API flows, debugging issues with Lambda executions, ensuring correct data persistence in DynamoDB, and monitoring event-driven workflows via EventBridge. Additionally, authentication must be properly managed using Cognito user pools (AdminPool, UserPool), ensuring the right access control. Progress tracking through the status selection feature will help maintain clarity on completed and pending tasks.
+
+By the end of the week, all integrations should be working smoothly, with a structured process for handling messages, membership upgrades, and auction bidding. The overall goal is to streamline backend operations, ensure data consistency, and improve system reliability for these core features.</p>
+            </section>
+
+        <div class="slideshow-container">
+            <h1>Documentation</h1>
+            <div class="slides">
+                <img class="slide" src="./images/week2/IMG_0608.JPG" alt="Slide 1">
+                <img class="slide" src="./images/week2/IMG_0613.JPG" alt="Slide 2">
+                <img class="slide" src ="./images/week2/IMG_0619.JPG" alt="Slide 3">
+                <img class="slide" src="./images/week2/IMG_0621.JPG" alt="Slide 4">
+                <img class="slide" src="./images/week2/IMG_0625.JPG" alt="Slide 5">
+                <img class="slide" src="./images/week2/IMG_0639.JPG" alt="Slide 6">
+                <img class="slide" src="./images/week2/IMG_0640.JPG" alt="Slide 7">
+                <img class="slide" src="./images/week2/IMG_0670.JPG" alt="Slide 8">
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Alvin S. Nario. All rights reserved.</p>
+    </footer>
+</body>
+</html>
