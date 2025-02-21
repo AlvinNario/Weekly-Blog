@@ -115,14 +115,10 @@ nav {
 
 .slides {
     display: flex;
-    width: 30%; /* Ensure it covers all images */
-    gap: 20px;
-    animation: slideAnimation 20s infinite linear;
-}
-
-.slide {
-    width: 40%; /* Display two images at a time */
-    flex-shrink: 0;
+    width: 40%; /* Ensure it covers all images */
+    gap: 10px;
+    animation: slideAnimation 30s infinite linear;
+    height: auto;
 }
 
 /* Optional: Auto-slide effect */
