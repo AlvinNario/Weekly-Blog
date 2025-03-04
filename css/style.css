@@ -46,10 +46,10 @@ input {
 
 .blog-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: auto !important;
     gap: 20px;
     padding: 20px;
 }
