@@ -46,9 +46,10 @@ input {
 
 .blog-list {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: auto;
     gap: 20px;
     padding: 20px;
 }
@@ -58,7 +59,7 @@ article {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 50%;
+    width: 45%;
 }
 
 article img {
