@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Week 7 - Blog | On-The-Job Training at StraStan Solutions Corp." />
+    <meta property="og:description" content="A detailed breakdown of our third week at StraStan Solutions Corp, focusing on AWS-CDK, API Gateway, and more." />
+    <meta property="og:image" content="https://alvinnario.github.io/Weekly-Blog/images/week7/" />
+    <meta property="og:url" content="https://alvinnario.github.io/Weekly-Blog/w7-blog.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="StraStan Solutions Blog" />
+    <title>Week 7 - Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/blog-style.css">
+    <link rel="icon" type="image/png" href="./images/week7/IMG_1116.JPG">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1ADwrkwxTV/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/alv.nnnnnn?igsh=MXJ1aWlzMTN2ejhzNw%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/AlvinNario"><i class="bi bi-github"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+        <div class="blog-detail">
+            <img src="./images/week7/MAIN-IMAGE.png" alt="Blog Cover">
+            <h1>Week 7 of On-The-Job Training For StraStan Solutions Corp.</h1>
+            <p class="date">March 17 - 21, 2025</p>
+            <section class="content">
+                <p>This week’s tasks focused on successfully implementing essential Lambda functions for the Content Management System (CMS) in Strastan Solutions Chapter. These functions were designed to enhance marketplace, category, and subcategory management while also improving content organization. The backend is now fully operational and supports secure data handling, with all stored information being encrypted in AWS DynamoDB to ensure data integrity and security.</p>
+                    <div class="documentation">
+                    <img src="./images/week7/IMG_1114.JPG" alt="">
+                    <img src="./images/week7/IMG_1118.JPG" alt="">
+                    </div>
+                    <p>
+                        For marketplace management, the following Lambda functions were implemented: <code>createMarketplace</code>, which allows the creation of new marketplace entries; <code>getAllMarketplace</code>, which retrieves all available marketplace records; <code>updateMarketplace</code>, which enables modifications to existing marketplace data; and <code>deleteMarketplace</code>, which removes marketplace entries as needed. These functions provide a structured approach to handling marketplace-related data within the CMS.
+
+In addition, category management functions were integrated to streamline the organization of content categories. The <code>createCategory</code> function facilitates the addition of new categories, while getCategory allows for the retrieval of specific category details. The <code>updateCategory</code> function enables modifications to existing categories, and <code>deleteCategory</code> ensures that obsolete or unnecessary categories can be removed efficiently.
+
+Similarly, for subcategory management, the Lambda functions <code>createSubcategory</code>, <code>getSubcategoryByCategory</code>, <code>updateSubcategory</code>, and <code>deleteSubcategory</code> were successfully deployed. These functions allow for better structuring of hierarchical content by enabling the creation, retrieval, updating, and deletion of subcategories based on specific categories. This ensures that data is well-organized and easily accessible within the CMS.
+
+Beyond marketplace and category management, additional functions were implemented to improve content organization. The <code>organizeContent</code> function plays a critical role in structuring and managing various content elements within the system. Meanwhile, the <code>importCardSchema</code> function enables the seamless importation of predefined card schemas, which helps standardize content formatting and presentation.
+
+Throughout the implementation process, several tools were used to test and validate the functionality of the Lambda functions. Postman was leveraged for API endpoint testing, allowing for detailed request and response validation to ensure that each function operates as intended. Additionally, AWS CloudWatch was utilized for monitoring errors and debugging, providing valuable insights into function performance and system behavior.
+
+With these Lambda functions now fully implemented and tested, the CMS backend for Strastan Solutions Chapter is well-equipped to handle complex data management tasks efficiently and securely. The encryption of stored data in AWS DynamoDB ensures robust security, while the integration of comprehensive marketplace, category, and content management functions provides a scalable foundation for future enhancements. </p>
+                    
+            </section>
+
+        <div class="slideshow-container">
+            <h1>Documentation</h1>
+            <div class="slides">
+                <img class="slide" src="./images/week7/IMG_1115.JPG" alt="Slide 1">
+                <img class="slide" src="./images/week7/IMG_1116.JPG" alt="Slide 2">
+                <img class="slide" src ="./images/week7/IMG_1117.JPG" alt="Slide 3">
+                <img class="slide" src="./images/week7/IMG_1119.JPG" alt="Slide 4">
+                <img class="slide" src="./images/week7/IMG_1120.JPG" alt="Slide 5">
+                <img class="slide" src="./images/week7/IMG_1121.JPG" alt="Slide 6">
+                <img class="slide" src="./images/week7/IMG_1122.JPG" alt="Slide 7">
+                <img class="slide" src="./images/week7/IMG_1114.JPG" alt="Slide 8">
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Alvin S. Nario. All rights reserved.</p>
+    </footer>
+</body>
+</html>
