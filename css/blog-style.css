@@ -107,44 +107,36 @@ nav {
 
 .slideshow-container {
     position: relative;
-    max-width: 100%;
-    margin: auto;
-    text-align: center;
+    width: 100%;
     overflow: hidden;
+    cursor: grab;
 }
 
 .slides {
     display: flex;
-    width: 40%; /* Ensure it covers all images */
     gap: 10px;
-    animation: slideAnimation 30s infinite linear;
+    padding: 10px;
     height: auto;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    user-select: none;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
 }
 
-/* Optional: Auto-slide effect */
-@keyframes slideAnimation {
-    0% { transform: translateX(0%); }
-    2% { transform: translateX(-25%); }
-    4% { transform: translateX(-50%); }
-    6% { transform: translateX(-75%); }
-    8% { transform: translateX(-100%); }
-    10% { transform: translateX(-125%); }
-    12% { transform: translateX(-150%); }
-    14% { transform: translateX(-175%); }
-    16% { transform: translateX(-200%); }
-    18% { transform: translateX(-225%); }
-    20% { transform: translateX(-250%); }
-    22% { transform: translateX(-275%); }
-    24% { transform: translateX(-300%); }
-    26% { transform: translateX(-325%); }
-    28% { transform: translateX(-350%); }
-    30% { transform: translateX(-375%); }
-    32% { transform: translateX(-400%); }
-    34% { transform: translateX(-425%); }
-    36% { transform: translateX(-450%); }
-    38% { transform: translateX(-475%); }
-    40% { transform: translateX(-500%); }
-    100% { transform: translateX(0%); }
+.slides::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.slides img {
+    width: auto;
+    height: 600px;
+    flex-shrink: 0;
+    pointer-events: none;
+    border-radius: 10px;
 }
 
 .slideshow-container h1{
