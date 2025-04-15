@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Week 10 - Blog | On-The-Job Training at StraStan Solutions Corp." />
+    <meta property="og:description" content="A detailed breakdown of our ninth week at StraStan Solutions Corp, focusing on AWS and more." />
+    <meta property="og:image" content="https://alvinnario.github.io/Weekly-Blog/images/week10/IMG_1487.jpg" />
+    <meta property="og:url" content="https://alvinnario.github.io/Weekly-Blog/w10-blog.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="StraStan Solutions Blog" />
+    <title>Week 10 - Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/blog-style.css">
+    <link rel="icon" type="image/png" href="./images/week10/IMG_1487.JPG">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1ADwrkwxTV/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/alv.nnnnnn?igsh=MXJ1aWlzMTN2ejhzNw%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/AlvinNario"><i class="bi bi-github"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="blog-detail">
+        <img src="./images/week10/MAIN_IMAGE.png" alt="Blog Cover">
+        <h1>Week 10 of On-The-Job Training For StraStan Solutions Corp.</h1>
+        <p class="date">April 7 - 11, 2025</p>
+        <section class="content">
+            <p>
+                &emsp;&emsp;&emsp;During the week of April 7 to 11, 2025, significant progress was made across multiple areas of the project, particularly focusing on backend enhancements, security integration, and data management improvements. In the cards module, the cleanEncryptedPayload function was refactored to better handle undefined values and improve overall data processing. Additionally, decrypted fields were included in response objects, and the schema was expanded to support marketplaceId, categoryId, and subcategoryId. CORS preflight support was also added for endpoints involving card schema with ID parameters to ensure smoother cross-origin requests.
+            </p>
+            <div class="documentation">
+                <img src="./images/week10/IMG_1481.JPG" alt="">
+                <img src="./images/week10/IMG_1482.JPG" alt="">
+            </div>
+            <p>
+                &emsp;&emsp;&emsp;A new CSV upload feature was introduced, integrating with Amazon S3 to streamline bulk data imports. For user registration, the flow was overhauled by removing redundant Google token verification logic and later reintegrating it in a cleaner, more efficient manner using a new environment variable (GOOGLE_CLIENT_ID). Enhancements also included the generation of UUIDs for user IDs, removal of the password from required fields, better error handling, and more user-friendly response messages. The system was further improved with updated IAM permissions for Cognito operations, revised API Gateway authorizer references, and added support for listing users in the user pool.
+            </p>
+            <p>
+                &emsp;&emsp;&emsp;User profile management also saw key updates, such as the creation of a new DynamoDB table, appropriate permission grants, and the implementation of a GetAllUserProfiles Lambda function with decryption capabilities. In session management, the naming of session tables was standardized (e.g., UserSessionTable), write access was configured correctly, and associated IAM roles were refined. Additionally, security was strengthened through the integration of custom authorization in the register endpoint, corrections to JWKS URL configurations, and environment variable adjustments for user pool IDs.
+            </p>
+            <p>
+                &emsp;&emsp;&emsp;Finally, encryption functionality was enhanced with the creation of a dedicated encryption Lambda function, including improved logging, error handling, and the encryption of specific fields like SK in user profiles. IAM policies were also updated to allow proper invocation of this Lambda and access to necessary DynamoDB resources. Altogether, these changes contributed to a more secure, scalable, and robust backend architecture.
+            </p>
+        </section>
+
+        <div class="slideshow-container">
+            <h1>Documentation</h1>
+            <div class="slides">
+                <img class="slide" src="./images/week10/IMG_1481.JPG" alt="Slide 1">
+                <img class="slide" src="./images/week10/IMG_1482.JPG" alt="Slide 2">
+                <img class="slide" src="./images/week10/IMG_1483.JPG" alt="Slide 3">
+                <img class="slide" src="./images/week10/IMG_1484.JPG" alt="Slide 4">
+                <img class="slide" src="./images/week10/IMG_1487.JPG" alt="Slide 5">
+                <img class="slide" src="./images/week10/IMG_1488.JPG" alt="Slide 6">
+                <img class="slide" src="./images/week10/IMG_1489.JPG" alt="Slide 7">
+                <img class="slide" src="./images/week10/IMG_1490.JPG" alt="Slide 8">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Alvin S. Nario. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const slider = document.querySelector('.slides');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>

@@ -33,13 +33,13 @@
             <h1>Week 9 of On-The-Job Training For StraStan Solutions Corp.</h1>
             <p class="date">March 31 - April 4, 2025</p>
             <section class="content">
-                <p>This week (March 31 – April 4, 2025), our backend team focused heavily on improving the card schema features and security. We enhanced the encryption and decryption process in our card schema functions to make data handling more secure and consistent. Part of that involved refactoring the getCardSchema Lambda to properly decrypt all fetched schemas, handle any potential errors, and include the encrypted schemaId in the response payload. We also added a helpful utility function, flexSerializeFields, to better handle object serialization.</p>
+                <p>&emsp;&emsp;&emsp;This week (March 31 – April 4, 2025), our backend team focused heavily on improving the card schema features and security. We enhanced the encryption and decryption process in our card schema functions to make data handling more secure and consistent. Part of that involved refactoring the getCardSchema Lambda to properly decrypt all fetched schemas, handle any potential errors, and include the encrypted schemaId in the response payload. We also added a helpful utility function, flexSerializeFields, to better handle object serialization.</p>
                     <div class="documentation">
                     <img src="./images/week9/IMG_1392.JPG" alt="">
                     <img src="./images/week9/Screenshot 2025-04-07 141903.png" alt="">
                     </div>
                     <p>
-                        Another big focus was the implementation of the DeleteCardSchema Lambda function. We made sure that schema deletion now works with encrypted schemaIds, added it to the stack configuration, and hooked it up to the API Gateway. This brings us a step closer to a fully secure and flexible card management flow.
+                        &emsp;&emsp;&emsp;Another big focus was the implementation of the DeleteCardSchema Lambda function. We made sure that schema deletion now works with encrypted schemaIds, added it to the stack configuration, and hooked it up to the API Gateway. This brings us a step closer to a fully secure and flexible card management flow.
 
 On the infrastructure side, we updated Lambda role permissions to allow broader invocation access. We also made a few small but important tweaks, like adding the busboy dependency for image upload support, setting up package.json for the image-upload Lambda, and enabling CORS in the importCardSchema Lambda for better cross-origin compatibility.</p>
                     
