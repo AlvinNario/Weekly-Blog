@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Week 12 - Blog | On-The-Job Training at StraStan Solutions Corp." />
+    <meta property="og:description" content="A detailed breakdown of our ninth week at StraStan Solutions Corp, focusing on AWS and more." />
+    <meta property="og:image" content="https://alvinnario.github.io/Weekly-Blog/images/week12/490991497_659259170357088_7902294454315809513_n.jpg" />
+    <meta property="og:url" content="https://alvinnario.github.io/Weekly-Blog/w12-blog.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="StraStan Solutions Blog" />
+    <title>Week 12 - Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/blog-style.css">
+    <link rel="icon" type="image/png" href="./images/week12/490991497_659259170357088_7902294454315809513_n.jpg">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1ADwrkwxTV/?mibextid=wwXIfr"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/alv.nnnnnn?igsh=MXJ1aWlzMTN2ejhzNw%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/AlvinNario"><i class="bi bi-github"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="blog-detail">
+        <img src="./images/week12/MAIN_IMAGE.png" alt="Blog Cover">
+        <h1>Week 12 of On-The-Job Training For StraStan Solutions Corp.</h1>
+        <p class="date">April 21 - 25, 2025</p>
+        <section class="content">
+            <p>
+                &emsp;&emsp;&emsp;This week, we've made some important updates to our application to improve how we handle Lambda functions, CSV uploads, and manage our DynamoDB tables. These changes aim to make the system more efficient and easier to maintain. One of the main improvements was the refactoring of the CSV upload handler. This update improved how we handle errors and structured the responses. We also enhanced the validation process, which helps ensure that data from the uploaded CSV file is correctly processed. Along with this, we added IAM policies to allow our Lambda function to properly interact with DynamoDB by enabling the PutItem action. This ensures the uploaded data is safely stored in the database.
+            </p>
+            <div class="documentation">
+                <img src="./images/week12/491009119_1217232256586603_2994518458551620524_n.jpg" alt="">
+                <img src="./images/week12/491858673_2172752926496892_7128609582719480862_n.jpg" alt="">
+            </div>
+            <p>
+                &emsp;&emsp;&emsp;Another task involved renaming tables in DynamoDB. This was done to make sure our naming conventions align with the overall structure of the application. All the Lambda functions that interact with these tables were updated accordingly, ensuring smooth data flow across the system.
+
+                We also added Prometheus metrics for better monitoring of the application. This allows us to track key performance indicators and catch potential issues early. With the help of Lambda functions and API Gateway, these metrics can now be accessed easily, giving us real-time insights into the app’s health.
+            </p>
+            <p>
+                &emsp;&emsp;&emsp;In terms of API improvements, we added GET and POST methods for the CSV card schema resource, which makes managing CSV files easier. This was also complemented by configuring CORS headers to allow seamless communication between the client and the server.
+
+                Along with these major tasks, we spent time renaming several Lambda functions for consistency, improved code readability, and simplified the structure of our serverless application. We also worked on fixing minor issues like mismatched table names and path parameters in Lambda functions, making the codebase more maintainable.
+            
+            <p>
+                &emsp;&emsp;&emsp;Overall, this week was focused on streamlining our processes, ensuring better performance, and improving security. These updates make the application more reliable and set the foundation for future growth. Next, we’ll continue enhancing the platform with new features and optimizations.
+            </p>
+        </section>
+
+        <div class="slideshow-container">
+            <h1>Documentation</h1>
+            <div class="slides">
+                <img class="slide" src="./images/week12/490980697_656723440458825_4132004709209748415_n.jpg" alt="Slide 1">
+                <img class="slide" src="./images/week12/490983078_1973102039890120_9080404871995052129_n.jpg" alt="Slide 2">
+                <img class="slide" src="./images/week12/490991497_659259170357088_7902294454315809513_n.jpg" alt="Slide 3">
+                <img class="slide" src="./images/week12/491000684_10030146927030412_5616991230970718888_n.jpg" alt="Slide 4">
+                <img class="slide" src="./images/week12/491001485_3189625414511987_3661938797812122810_n.jpg" alt="Slide 5">
+                <img class="slide" src="./images/week12/491009119_1217232256586603_2994518458551620524_n.jpg" alt="Slide 6">
+                <img class="slide" src="./images/week12/491009176_1182910393583258_6527380567006603714_n.jpg" alt="Slide 7">
+                <img class="slide" src="./images/week12/491680119_3975101489372376_2723830399308969697_n.jpg" alt="Slide 8">
+                <img class="slide" src="./images/week12/491858673_2172752926496892_7128609582719480862_n.jpg" alt="Slide 9">
+                <img class="slide" src="./images/week12/491961917_983862567196193_8512419770818564858_n.jpg" alt="Slide 10">
+                <img class="slide" src="./images/week12/491979058_1424310685402286_8861608917663601633_n.jpg" alt="Slide 11">
+                <img class="slide" src="./images/week12/494325516_1214406306982676_4292187638852673785_n.jpg" alt="Slide 12">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 Alvin S. Nario. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const slider = document.querySelector('.slides');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+</body>
+</html>
